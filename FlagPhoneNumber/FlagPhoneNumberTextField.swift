@@ -386,4 +386,8 @@ open class FPNTextField: UITextField, UITextFieldDelegate, FPNCountryPickerDeleg
 	internal func didSelect(country: FPNCountry) {
 		setFlag(for: country.code!)
 	}
+    
+    open override func becomeFirstResponder() -> Bool {
+        return self.phoneCodeTextField.becomeFirstResponder()
+    }
 }
